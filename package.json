@@ -1,0 +1,28 @@
+{
+  "name": "vanilla",
+  "version": "1.0.0",
+  "description": "JavaScript example starter project",
+  "main": "index.html",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html"
+  },
+  "dependencies": {
+    "breakpoint-sass-mixins": "1.0.0",
+    "mediaquery": "0.0.4",
+    "mixin": "0.2.0",
+    "sass": "1.26.11"
+  },
+  "devDependencies": {
+    "breakpoint-sass": "^2.7.0",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0"
+  },
+  "keywords": [
+    "javascript",
+    "starter"
+  ],
+  "author": "",
+  "license": "ISC"
+}

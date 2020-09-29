@@ -1,0 +1,77 @@
+//Footer styling
+
+footer {
+  padding: rem(15px) 0;
+  background-image: linear-gradient(0deg, #171513 0%, #2d2725 100%);
+  color: $light-grey;
+  @include breakpoint($mobile-only) {
+    padding: rem(25px) 0 rem(35px);
+  }
+  .footer-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include breakpoint($mobile-only) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    &__right {
+      display: flex;
+      @include breakpoint($mobile-only) {
+        justify-content: center;
+      }
+
+      span {
+       margin-right: rem(2px);
+      }
+    }
+
+    &__image-wrapper {
+      display: flex;
+      align-items:center;
+    }
+
+    &__social-icon {
+      margin: 0 rem(4px);
+      @include breakpoint($mobile-only) {
+        margin: 0 rem(8px);
+      }
+
+      &.facebook-icon,
+      &.linked-in-icon {
+        height: rem(15px);
+        background-color: $light-grey;
+        border-radius: 4px;
+
+        span {
+          color: $grey-50;
+        }
+      }
+
+      &.facebook-icon {
+        width: rem(14px);
+        padding-top: rem(1px);
+      }
+
+      &.linked-in-icon {
+        border-radius: 0;
+      }
+
+      &.twitter-icon {
+        span {
+          font-size: 0.9rem;
+        }
+      }
+
+      span {
+        font-size: 0.8rem;
+        color: $light-grey;
+        display: block;
+        padding: rem(2px);
+        margin: 0;
+        font-weight: 600;
+      }
+    }
+  }
+}

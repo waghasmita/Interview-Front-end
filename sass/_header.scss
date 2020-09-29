@@ -1,0 +1,170 @@
+//Header styles
+
+header {
+  .navbar {
+    background-color: $grey;
+    background-image: linear-gradient(0deg, #171513 0%, #2d2725 100%);
+
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: rem(20px) 0;
+      @include breakpoint($mobile-only) {
+        position: relative;
+        justify-content: unset;
+      }
+    }
+
+    &__left {
+      width: 20%;
+      @include breakpoint($mobile-only) {
+        display: none;
+      }
+    }
+
+    &__right {
+      display: flex;
+      justify-content: flex-end;
+      width: 80%;
+      @include breakpoint($mobile-only) {
+        display: none;
+      }
+    }
+
+    &__menu-list {
+      display:flex;
+      align-items: center;
+      margin: 0;
+      @include breakpoint($mobile-only) {
+        display: none;
+      }
+    }
+
+    &__mobile-menu-list {
+      @include breakpoint($mobile-only) {
+        display: none;
+      }
+      &.hamburger-menu--active {
+        display: block;
+        position: absolute;
+        flex-wrap: wrap;
+        margin-top: rem(20px);
+        padding: rem(15px) 0 rem(20px) rem(40px);
+        height: 20vh;
+        width: 89vw;
+        left: -17px;
+        top: 100%;
+        background-color: $grey-50;
+        ttransition: all 0.5s ease-in-out;
+      }
+    }
+    &__item {
+      @include breakpoint($mobile-only) {
+        width: 100%;
+        padding: rem(5px) 0;
+      }
+      a {
+        color: $light-grey;
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+
+    &__cta-button {  
+      @include button;
+      position: relative;
+      padding: 5px 18px 5px 35px;
+      margin-left: 15px;
+      &:before {
+        content: "";
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        left: 15px;
+        top: 6px;
+        background: url(../images/get-in-touch.png) no-repeat;
+        background-size: 13px;
+      }
+    }
+    &__mobile {
+      display: flex;
+      align-items: center;
+      position: relative;
+      width: 100%;
+      @include breakpoint($tablet) {
+        display: none;
+      }      
+    }
+    &__company-logo {
+      width: 75%;
+      text-align: center;
+      margin: 0 auto;
+    }
+    &__mobile-cta-button {
+      width: rem(20px);
+      height: rem(20px);
+      background: url(../images/get-in-touch.png) no-repeat;
+      background-size: rem(20px);
+      border: 0;
+    }
+    .hamburger-menu {
+      --box-shadow-color: rgba(255, 101, 47, 0.2);
+      width: 15%;
+      cursor: pointer;
+      transition: all 0.5s ease-in-out;
+      @include breakpoint($tablet) {
+        display: none;
+      }
+    }
+
+    .hamburger-btn,
+    .hamburger-btn::before,
+    .hamburger-btn::after {
+      width: rem(34px);
+      height: rem(4px);
+      margin-top: rem(-5px);
+      border-radius: 5px;
+      background-color: $white;
+      box-shadow: 0 2px 5px var(--box-shadow-color);
+
+      transition: all 0.5s ease-in-out;
+    }
+
+    .hamburger-btn::before,
+    .hamburger-btn::after {
+      content: "";
+      position: absolute;
+    }
+
+    .hamburger-btn::before {
+      transform: translateY(-16px);
+      margin-top: rem(6px);
+    }
+
+    .hamburger-btn::after {
+      transform: translateY(16px);
+    }
+
+    /* ANIMATION */
+    .hamburger-menu {
+      &.open {
+        .hamburger-btn {
+          transform: translateX(-50px);
+          background-color: transparent;
+          box-shadow: none;
+
+          &::before {
+            transform: rotate(45deg) translate(35px, -35px);
+          }
+
+          &::after {
+            transform: rotate(-45deg) translate(35px, 35px);
+            margin-top: rem(6px);
+          }
+        }
+      }
+    }
+  }
+}

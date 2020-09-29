@@ -1,0 +1,16 @@
+//Converts px to rem
+
+@function rem($value) {
+  @if type-of($value) == number {
+    @if unit($value) == '' {
+      $value: $value * 1px;
+    }
+    @if unit($value) != 'px' {
+      @error "`#{$value}` must be in pixels, or unitless.";
+    }
+  } 
+  @else {
+    @error "`#{$value}` must be a number.";
+  }
+  @return $value / 16px * 1rem;
+}

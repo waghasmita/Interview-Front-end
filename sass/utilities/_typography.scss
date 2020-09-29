@@ -1,0 +1,42 @@
+// Font declarations.
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url('/src/sass/fonts/Quicksand-Light.ttf');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Quicksand-regular';
+  src: url('/src/sass/fonts/Quicksand-Regular.ttf');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Quicksand-medium';
+  src: url('/src/sass/fonts/Quicksand-Medium.ttf');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Quicksand-semibold';
+  src: url('/src/sass/fonts/Quicksand-SemiBold.ttf');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Quicksand-bold';
+  src: url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+  font-weight: 700;
+  font-style: normal;
+}
+
+$font-light: "Quicksand";
+$font-regular: "Quicksand-regular";
+$font-medium: "Quicksand-medium";
+$font-semibold: "Quicksand-semibold";
+$font-bold: "Quicksand-bold";
+

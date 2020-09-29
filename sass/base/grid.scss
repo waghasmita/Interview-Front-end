@@ -1,0 +1,7 @@
+//Breakpoint variables for media queries
+
+$mobile-only: (max-width 767px);
+$tablet:(min-width 768px);
+$tablet-only: (min-width 768px) (max-width 1023px);
+$widedesktop: (min-width 1024px);
+$ipad-pro: (max-width 1024px);

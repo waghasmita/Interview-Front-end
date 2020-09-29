@@ -1,0 +1,65 @@
+/**
+*
+* Global
+*
+**/
+body {
+  font-family: $font-light;
+  margin: 0;
+
+  .container {
+    max-width: rem(1256px);
+    margin: 0 auto;
+    @include breakpoint($ipad-pro) {
+      max-width: 100%;
+      margin: 0 rem(20px);
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: $white;
+  }
+
+  ul {
+    list-style-type: none;
+    li {
+      padding: 0 rem(20px);
+    }
+  }
+
+  p {
+    font-family: $font-medium;
+  }
+}
+
+form {
+  input {
+    width: -webkit-fill-available;
+    padding: rem(15px);
+    margin-right: rem(15px);
+    border-radius: 4px;
+    border: 1px solid $grey-40;
+  }
+}
+
+h1,
+h2,
+h3 {
+  margin: rem(20px) 0;
+}
+
+h2 {
+  font-size: rem(34px);
+  @include breakpoint($mobile-only) {
+    font-size: rem(30px);
+  }
+}
+
+h3 {
+  font-size: rem(22px);
+}
+
+h1 {
+  font-size: rem(36px);
+}

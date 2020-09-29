@@ -1,0 +1,98 @@
+//Testimonial slider styles.
+
+.block-testimonial {
+  padding: rem(40px) 0 rem(80px) 0;
+  background-color: $grey-30;
+
+  &__cards-wrapper {
+    display: flex;
+    @include breakpoint($mobile-only) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__title {
+    text-align:  center;
+  }
+
+  &__card {
+    margin: 0 rem(20px);
+    flex-basis: 33.33%;
+    @include breakpoint($mobile-only) {
+      flex-basis: 100%;
+      margin: 0 rem(10px);
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__card-content {
+    position: relative;
+    padding: rem(20px) rem(50px) rem(20px) rem(50px);
+    box-shadow: 0px 2px 1.5px rgba(0, 0, 0, 0.25);
+    border: 1px solid $dark-grey-border;
+    background-color: $white;
+    filter: drop-shadow(2px 3px 0px rgba(0, 0, 0, 0.08));
+    border-radius: 20px;
+
+    p {
+      position: relative;
+      color: $grey-20;
+      &:before {
+        content: "";
+        position: absolute;
+        width: rem(20px);
+        height: rem(20px);
+        top: -20px;
+        left: -25px;
+        background: url(../images/quotes.png) no-repeat;
+        background-size: 20px;
+      }
+    }
+
+    &:after {
+      position: absolute;
+      visibility: visible;
+      width: 0;
+      height: 0;
+      bottom: -20px;
+      left: 12%;
+      content: "";
+      border-color: transparent;
+      border-left: 25px solid transparent;
+      border-top: 20px solid $white;
+      border-bottom: 0;
+    }
+  }
+
+  &__client-info {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: rem(22px);
+    .client-profile-img {
+      max-height: rem(63px);
+    }   
+  }
+
+  &__client-name {
+    width: 80%;
+    margin: rem(5px) 0 0 rem(10px);
+    text-transform: uppercase;
+    @include breakpoint($ipad-pro) {
+      width: auto;
+    }
+  }
+
+  &__client-designation {
+    width: 62%;
+    margin: rem(-28px) auto 0 auto;
+    color: $grey-10;
+    font-family: $font-regular;
+    @include breakpoint($ipad-pro) {
+      width: auto;
+      margin: rem(-28px) auto 0 rem(75px);
+    }
+  }
+}
